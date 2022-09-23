@@ -1,0 +1,25 @@
+{
+	"manifest_version": 3,
+	"name": "Semaphore Extension",
+  "short_name": "Zk-Test",
+	"author": "Darwin",
+	"version": "1.0.1",
+	"description": "Replace new tab screen with English word",
+	"icons": {
+		"16": "darwinFav16.ico",
+		"48": "darwinFav48.ico",
+		"128": "darwinFav128.ico"
+	},
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["inject.js"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+
+    "default_popup": "index.html"
+  }
+}
